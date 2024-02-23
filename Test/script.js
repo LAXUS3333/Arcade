@@ -1,13 +1,25 @@
-window.addEventListener('DOMContentLoaded', () => {
-    const header = document.querySelector('.H');
-    const images = ['Images/e2.jpg']; // Replace with paths to your images
+const carouselSlide = document.querySelector('.carousel-slide');
+const images = document.querySelectorAll('.carousel-slide img');
 
-    let index = 0;
+let counter = 0;
+const slideWidth = images[0].clientWidth;
 
-    function changeBackground() {
-        header.style.backgroundImage = `url(${images[index]})`;
-        index = (index + 1) % images.length;
-    }
+function nextSlide() {
+    if (counter >= images.length - 1) return;
+    counter++;
+    carouselSlide.style.transition = 'transform 0.4s ease-in-out';
+    carouselSlide.style.transform = `translateX(${-counter * slideWidth}px)`;
+}
 
-    setInterval(changeBackground, 5000); // Change background every 5 seconds (5000 milliseconds)
-});
+function prevSlide() {
+    if (counter <= 0) return;
+    counter--;
+    carouselSlide.style.transition = 'transform 0.4s ease-in-out';
+    carouselSlide.style.transform = `translateX(${-counter * slideWidth}px)`;
+}
+
+document.querySelector('.next-btn').addEventListener('click', nextSlide);
+document.querySelector('.prev-btn').addEventListener('click', prevSlide);
+
+// Automatic slide
+setInterval(nextSlide, 3000);
