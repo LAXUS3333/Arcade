@@ -12,14 +12,15 @@
 .H::before {    
       content: "";
       background-image: url("Images/01.png");
-      background-size: cover;
-      position: absolute;
+      background-size:cover;
+      position:absolute;
       top: 0px;
       right: 0px;
       bottom: 0px;
       left: 0px;
       opacity: 0.25;
-      animation: change 10s infinite ease-in-out;
+      animation: change 15s infinite ease-in-out;
+      animation-duration: 50s;
     }
 .arcade {
     max-width: 100px;}
@@ -84,26 +85,91 @@ button[type="submit"] {
     {
         background-image: url(Images/01.png);
     }
-    25%
+    15%
     {
-        background-image: url(Images/e2.jpg);
+        background-image: url(Images/07.png);
     }
-    50%
+    30%
     {
         background-image: url(Images/02.jpg);
     }
-    75%
+    45%
     {
         background-image: url(Images/03.jpg);
+    }
+    
+    60%
+    {
+        background-image: url(Images/04.png);
+    }
+    75%
+    {
+        background-image: url(Images/05.jpeg);
+    }
+    90%
+    {
+        background-image: url(Images/06.jpeg);
     }
     100%
     {
         background-image: url(Images/01.png);
     }
-
-    
+}
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center; /* Center align the content */
 }
 
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px; /* Add space between sections */
+}
 
+.footer-section {
+    text-align: left;
+    padding: 20px; /* Increase padding for better spacing */
+    flex: 1; /* Make sections equal width */
+    max-width: 300px; /* Limit maximum width of each section */
+}
 
+.footer-section h2 {
+    font-size: 20px; /* Reduce font size for better proportion */
+    margin-bottom: 10px; /* Add space below heading */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-family: "Press Start 2P";
+    margin-top: 10px;
+}
+
+.footer-bottom {
+    background-color: #000;
+    padding: 10px 0;
+    color: #fff;
+}
+#pp {
+    font-family: "Press Start 2P";
+}
 
