@@ -43,6 +43,9 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
 }
 
 li {
@@ -97,7 +100,7 @@ button[type="submit"] {
     }
     45%
     {
-        background-image: url(Images/10.jpg);
+        background-image: url(Images/07.png);
     }
     
     60%
@@ -117,7 +120,16 @@ button[type="submit"] {
         background-image: url(Images/01.png);
     }
 }
-
+.gg{
+    text-align: center;
+    padding: 40px;
+    color: white;
+}
+.ff{
+    text-align: center;
+    padding: 30px;
+    color: white;
+}
 *{
     margin: 0;
     padding: 0;
@@ -128,18 +140,25 @@ button[type="submit"] {
     height: 500px;
     overflow: hidden;
 }
-
+.top{
+    position: relative;
+    left: 0;
+    width: 1000%; /* width dikali slide */
+    animation: 70s slide infinite;
+    padding: 20px;
+}
 figure{
     position: relative;
     left: 0;
-    width: 400%; /* width dikali slide */
-    animation: 30s slide infinite;
+    width: 1000%; /* width dikali slide */
+    animation: 60s slide infinite;
 }
 
 .slide{
     position: relative;
-    width: 25%; /* width dibagi slide */
-    float: left;
+    width: 10%; /* width dibagi slide */
+    float:left;
+    padding: 2px;
 }
 
 .slide h1{
@@ -153,7 +172,7 @@ figure{
 }
 
 .slide img{
-    width: 100%;
+    width: 98%;
     height: 500px;
 }
 
@@ -162,45 +181,37 @@ figure{
         left:0;
     }
     10%{
-        left:0;
+        left:-100%;
     }
     20%{
-        left:-100%;
+        left:-200%;
     }
     30%{
-        left:-100%;
+        left:-300%;
     }
     40%{
-        left:-200%;
+        left:-400%;
     }
     50%{
-        left:-200%;
+        left:-500%;
     }
-    55%{
-        left:-300%;
+    60%{
+        left:-600%;
     }
-    65%{
-        left:-300%;
+    70%{
+        left:-700%;
     }
-    66%{
-        left:-200%;
-    }
-    74%{
-        left:-200%;
-    }
-    75%{
-        left:-100%;
-    }
-    85%{
-        left:-100%;
+    80%{
+        left:-800%;
     }
     90%{
-        left:0;
+        left:-900%;
     }
-    1000%{
+    100%{
         left:0;
     }
 }
+
 
 footer {
     background-color: #222;
@@ -259,4 +270,3 @@ ul li a {
 #pp {
     font-family: "Press Start 2P";
 }
-
