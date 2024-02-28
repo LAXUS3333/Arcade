@@ -10,6 +10,8 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    top: 50%;
+    
 }
 .H::before {    
       content: "";
@@ -29,7 +31,11 @@
   body{
     background-color: rgb(20, 20, 20);
     color:rgb(127, 255, 30);
-    font-family: "Press Start 2P";
+    font-family: "Josefin Sans";
+	background-position: initial initial; 
+	background-repeat: initial initial;
+    overflow: scroll;
+    text-align: center;
 }
 
 .img{
@@ -60,7 +66,8 @@ a {
 }
 
 a:hover {
-    background-color: #555; /* Change hover background color as needed */
+    background-color: #555;
+    border-radius: 20px; /* Change hover background color as needed */
 }
 .search-box {
     display: inline-block;
@@ -72,7 +79,7 @@ input[type="text"] {
     border-radius: 5px;
     border: none;
     font-size: 16px;
-    font-family:  "Press Start 2P";
+    font-family:  "Josefin Sans";
 }
 
 button[type="submit"] {
@@ -82,7 +89,7 @@ button[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: "Press Start 2P";
+    font-family: "Josefin Sans";
     align-self:self-end;
 }
 @keyframes change {
@@ -102,7 +109,6 @@ button[type="submit"] {
     {
         background-image: url(Images/07.png);
     }
-    
     60%
     {
         background-image: url(Images/04.png);
@@ -144,21 +150,20 @@ button[type="submit"] {
     position: relative;
     left: 0;
     width: 1000%; /* width dikali slide */
-    animation: 70s slide infinite;
+    animation: 40s slide infinite;
     padding: 20px;
 }
 figure{
     position: relative;
     left: 0;
     width: 1000%; /* width dikali slide */
-    animation: 60s slide infinite;
+    animation: 50s slide infinite;
 }
 
 .slide{
     position: relative;
     width: 10%; /* width dibagi slide */
     float:left;
-    padding: 2px;
 }
 
 .slide h1{
@@ -169,7 +174,22 @@ figure{
     margin-top: 50px;
     color: rgb(127, 255, 30);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
 }
+.slide:hover .details {
+    opacity: 5;
+  }
+.details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    height: 50%;
+  }
 
 .slide img{
     width: 100%;
@@ -218,6 +238,8 @@ footer {
     color: #fff;
     padding: 20px 0;
     text-align: center; /* Center align the content */
+    margin-top: 10vh;
+    position: relative;
 }
 
 .footer-content {
@@ -258,7 +280,7 @@ ul li a {
     padding: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
-    font-family: "Press Start 2P";
+    font-family: "Josefin Sans";
     margin-top: 10px;
 }
 
@@ -268,5 +290,94 @@ ul li a {
     color: #fff;
 }
 #pp {
-    font-family: "Press Start 2P";
+    font-family: "Josefin Sans";
+}
+.wow_imgage {
+	position: relative;
+	float: left;
+	margin: 0 20px 20px 0;
+	width: 270px;
+	height: 180px;
+    padding: 20px;
+}
+
+.wow_imgage img {
+	border-radius: 5px;
+    background: #1e202b;
+}
+.wow_imgage:hover{
+    transform: scale(1.1);
+}
+
+.content{
+    height: 157px;
+    width: 232px;
+    top: 13px;
+    left: 19px;
+    padding: 20px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.6s;
+}
+.content:hover{
+    opacity: 1;
+}
+.content h3{
+    font-size: 20px;
+    margin-top: 15px;
+}
+.content p{
+    color: #fff;
+}
+.content h4{
+    font-size: 20px;
+    margin-top: 15px;
+}
+.xd{
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    left: 330px;
+}
+.images {
+    display: flex;
+    width:100%;
+    align-self: center;
+}
+.images img {
+    transition: all 0.15s ease;
+    width: 100%;
+}
+.images input {
+    display: none;
+}
+.dots {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.dots label {
+    height: 10px;
+    width: 10px;
+    border-radius: 25%;
+    border: solid rgb(127, 255, 30);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+.dots label:hover {background: rgb(127, 255, 30);}
+#img1:checked ~ .m1 {
+    margin-left: 0;
+}
+#img2:checked ~ .m2 {
+    margin-left: -100%;
+}
+#img3:checked ~ .m3 {
+    margin-left: -200%;
+}
+#img4:checked ~ .m4 {
+    margin-left: -300%;
 }
