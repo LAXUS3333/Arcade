@@ -274,6 +274,24 @@ ul li a {
     color: #fff;
     text-decoration: none;
 }
+ul li ul.d li{
+    display: block;
+}
+
+ul li ul.d{
+    width: 10%;
+    background-color: #222;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li a:hover {
+    background-color: #555;
+}
+ul li:hover ul.d{
+    display: block;
+}
 
 .contact-form textarea {
     width: 100%;
