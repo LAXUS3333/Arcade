@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,23 +20,34 @@
 <body>
      <nav>
          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Shop &#x25BE</a>
-            <ul class="d">
-                 <li><a href="games.html">Games</a></li>
-                <li><a href="#">Cards</a></li>
-                <li><a href="#">Accessories</a></li>
+             <li><a href="index.php">Home</a></li>
+             <li><a href="#">Shop &#x25BE</a>
+                <ul class="d">
+                    <li><a href="games.php">Games</a></li>
+                    <li><a href="#">Cards</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </li>
             </ul>
-            </li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li class="search-box">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li class="search-box">
                 <form action="#" method="get">
                      <input type="text" name="search" placeholder="Search...">
                     <button type="submit">Search</button>
                 </form>
             </li>
-            <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+            <?php
+
+            if (isset($_SESSION['userId'])) {
+                echo '<form action="SignUp/logout.php" method="post">
+                <button type="submit" class="log">Logout</button>
+                </form>';
+            }
+
+            else {
+               echo' <li><a href="Login.php"><i class="fa-solid fa-user"></i></a></li>';
+            }
+            ?>
         </ul>
      </nav>
 
@@ -257,33 +273,33 @@
 
 <h1 id="sim" class="c">Simulation</h1>
 <div class="wow_imgage end wow" data-wow-delay="0.3s">
-    <img src="Top Rated/p7.jpg" width="270" height="180"></img>
+    <img src="Games/fm.jpg" width="270" height="180"></img>
     <div class="content">
-        <h3>CyberPunk 2077</h3><br>
+        <h3>Football Manager</h3><br>
         <p>The Elder Scrolls V: Skyrim is an action role-playing video game developed by Bethesda Game Studios and published by Bethesda Softworks.</p>
         <br><span>Price: 100 &dollar;</span>
     </div>
 </div>
 <div class="wow_imgage end wow" data-wow-delay="0.3s">
-    <img src="Top Rated/p4.jpg" width="270" height="180"></img>
+    <img src="Games/sims.jpg" width="270" height="180"></img>
     <div class="content">
-        <h3>CyberPunk 2077</h3><br>
+        <h3>The Sims 4</h3><br>
         <p>The Elder Scrolls V: Skyrim is an action role-playing video game developed by Bethesda Game Studios and published by Bethesda Softworks.</p>
         <br><span>Price: 100 &dollar;</span>
     </div>
 </div>
 <div class="wow_imgage end wow" data-wow-delay="0.3s">
-    <img src="Top Rated/p9.jpg" width="270" height="180"></img>
+    <img src="Games/truck.jpg" width="270" height="180"></img>
     <div class="content">
-        <h3>CyberPunk 2077</h3><br>
+        <h3>Euro Truck Simulator 2</h3><br>
         <p>The Elder Scrolls V: Skyrim is an action role-playing video game developed by Bethesda Game Studios and published by Bethesda Softworks.</p>
         <br><span>Price: 100 &dollar;</span>
     </div>
 </div>
 <div class="wow_imgage end wow" data-wow-delay="0.3s">
-    <img src="Images/11.jpg" width="270" height="180"></img>
+    <img src="Games/war.jpg" width="270" height="180"></img>
     <div class="content">
-        <h3>CyberPunk 2077</h3><br>
+        <h3>War Thunder</h3><br>
         <p>The Elder Scrolls V: Skyrim is an action role-playing video game developed by Bethesda Game Studios and published by Bethesda Softworks.</p>
         <br><span>Price: 100 &dollar;</span>
     </div>

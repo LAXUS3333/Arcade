@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,11 +20,11 @@
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             
             <li><a href="#">Shop &#x25BE</a>
                 <ul class="d">
-                    <li><a href="games.html">Games</a></li>
+                    <li><a href="games.php">Games</a></li>
                     <li><a href="#">Cards</a></li>
                     <li><a href="#">Accessories</a></li>
                 </ul>
@@ -33,7 +37,7 @@
                     <button type="submit">Search</button>
                 </form>
             </li>
-            <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="Login.php"><i class="fa-solid fa-user"></i></a></li>
         </ul>
     </nav>
     <div class="L">
@@ -42,14 +46,14 @@
     <div class="H">
         <div class="box">
             <h1>Login</h1>
-            <form action="#" method="get">
-                <input type="email" name="Username" placeholder="Enter E-mail">
+            <form action="SignUp/login.php" method="post">
+                <input type="text" name="mailuid" placeholder="Enter Username">
                 <br>
-                <input type="password" name="Password" placeholder="Enter Password">
+                <input type="password" name="pwd" placeholder="Enter Password">
                 <br>
-                <input type="submit" value="Login" id="login">
+                <button type="submit" name="Login">LOGIN</button>
             </form>
-            <p>Not signed up already? <a class="signUp" href="#">Sign up here</a></p>
+            <p>Not signed up already? <a class="signUp" href="Signup.php">Sign up here</a></p>
         </div>
     </div>
     <footer>

@@ -399,3 +399,12 @@ ul li:hover ul.d{
 #img4:checked ~ .m4 {
     margin-left: -300%;
 }
+
+.log{
+
+    padding: 10px;
+    margin-left: 5px;
+    margin-bottom: 7px;
+
+
+}

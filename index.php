@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +22,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">Shop &#x25BE</a>
             <ul class="d">
-                <li><a href="games.html">Games</a></li>
+                <li><a href="games.php">Games</a></li>
                 <li><a href="#">Cards</a></li>
                 <li><a href="#">Accessories</a></li>
             </ul>
@@ -31,7 +35,19 @@
                     <button type="submit">Search</button>
                 </form>
             </li>
-            <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+            <?php
+
+            if (isset($_SESSION['userId'])) {
+                echo '<form action="SignUp/logout.php" method="post">
+                <button type="submit" class="log">Logout</button>
+                </form>';
+            }
+
+            else {
+               echo' <li><a href="Login.php"><i class="fa-solid fa-user"></i></a></li>';
+            }
+            ?>
+
         </ul>
     </nav>
 
@@ -39,7 +55,17 @@
         <img class="img" src="Images/arcad.png" alt="">
     </div>
     <div class="H">
-        <h1>Your gateway to endless adventures<br><br>Welcome to Arcade Pulse!</h1>
+        <?php
+        if (isset($_SESSION['userId'])) {
+           echo' <h1>We have awaited your presence!<br><br>Welcome</h1>'; 
+
+        }
+        else {
+           echo' <h1>Your gateway to endless adventures<br><br>Welcome to Arcade Pulse!</h1>';
+        }
+
+        ?>
+
     </div>
     <h2 class="gg">Best Deals for the Week!  <i class="fa-solid fa-dragon"></i></h2>
     
